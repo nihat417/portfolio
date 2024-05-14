@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200">
+    <nav className="bg-transparent border-gray-200">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
@@ -41,21 +41,21 @@ const Navbar = () => {
               placeholder="Search..."
             />
           </div>
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
             <li className="relative group">
-              <a href="#" className="block py-2 pl-3 pr-4 text-blue-700 bg-blue-100 rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
+              <a href="#" className="block py-2 pl-3 pr-4 text-blue-700 bg-transparent rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
                 <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">Home</span>
               </a>
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
+              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
                 <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">About</span>
               </a>
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
+              <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
                 <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">Services</span>
               </a>
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
