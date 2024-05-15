@@ -62,35 +62,17 @@ export default function Home() {
         <h1 className="text-4xl md:text-6xl whitetext mb-4">FIND ME ON</h1>
         <h4 className="text-lg md:text-xl whitetext mb-8">Feel free to connect with me</h4>
         <div className="flex space-x-6">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl text-gray-300 hover:text-black transition-colors duration-300">
+          <a href="https://github.com/nihat417" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl text-gray-300 hover:text-black transition-colors duration-300">
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl text-blue-700 hover:text-blue-900 transition-colors duration-300">
+          <a href="https://www.linkedin.com/in/nihat-akremi-683318260/" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl text-blue-700 hover:text-blue-900 transition-colors duration-300">
             <FaLinkedin />
           </a>
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl text-pink-500 hover:text-pink-700 transition-colors duration-300">
+          <a href="https://www.instagram.com/nihat417" target="_blank" rel="noopener noreferrer" className="text-4xl md:text-5xl text-pink-500 hover:text-pink-700 transition-colors duration-300">
             <FaInstagram />
           </a>
         </div>
       </section>
-
-      <footer className="bottom-0 w-full bg-gray-800 text-white p-4 ">
-        <div className="flex justify-between items-center">
-          <p className="text-left">Designed and Developed by Nihat Akremi</p>
-          <p className="text-center">Copyright © 2024 SB</p>
-          <div className="flex space-x-4">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400 transition-colors duration-300">
-              <FaGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400 transition-colors duration-300">
-              <FaLinkedin />
-            </a>
-            <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400 transition-colors duration-300">
-              <FaInstagram />
-            </a>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
