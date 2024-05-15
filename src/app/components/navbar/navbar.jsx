@@ -12,11 +12,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 0) 
         setIsScrolled(true);
-      } else {
+      else 
         setIsScrolled(false);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -38,8 +37,7 @@ const Navbar = () => {
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-search"
           aria-expanded={isOpen}
-          onClick={toggleMenu}
-        >
+          onClick={toggleMenu}>
           <span className="sr-only">Open main menu</span>
           <svg className="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
