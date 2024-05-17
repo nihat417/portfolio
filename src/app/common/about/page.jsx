@@ -14,7 +14,9 @@ const About = () => {
         </h4>
       </section>
       <section className="flex flex-col items-center mt-[100px] w-full">
-        <h1>Professional Skillset</h1>
+        <h1 className="text-center text-3xl font-bold mb-5">
+        Professional <span className="text-blue-800">Skillset</span>
+      </h1>
         <Techstack />
       </section>
       <section className="flex flex-col items-center mt-[100px] w-full">

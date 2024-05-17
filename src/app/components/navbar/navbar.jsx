@@ -1,10 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -12,9 +14,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) 
+      if (window.scrollY > 0)
         setIsScrolled(true);
-      else 
+      else
         setIsScrolled(false);
     };
 
@@ -24,6 +26,13 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/common/about", label: "About" },
+    { href: "/common/projects", label: "Projects" },
+    { href: "/common/resume", label: "Resume" }
+  ];
 
   return (
     <nav className={`fixed top-0 w-full border-gray-200 z-50 transition-all duration-300 ${isScrolled ? 'bg-white bg-opacity-70 backdrop-blur-md' : 'bg-transparent'}`}>
@@ -44,44 +53,17 @@ const Navbar = () => {
           </svg>
         </button>
         <div className={`items-center justify-between ${isOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto md:order-1`} id="navbar-search">
-          <div className="relative mt-3 md:hidden">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg className="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-              </svg>
-            </div>
-            <input
-              type="text"
-              id="search-navbar"
-              className="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Search..."
-            />
-          </div>
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
-            <li className="relative group">
-              <Link href="/" className="block py-2 pl-3 pr-4 text-blue-700 bg-transparent rounded md:bg-transparent md:text-blue-700 md:p-0" aria-current="page" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
-                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">Home</span>
-              </Link>
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-            </li>
-            <li className="relative group">
-              <Link href="/common/about" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
-                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">About</span>
-              </Link>
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-            </li>
-            <li className="relative group">
-              <Link href="/common/projects" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
-                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">Projects</span>
-              </Link>
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-            </li>
-            <li className="relative group">
-              <Link href="/common/resume" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
-                <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">Resume</span>
-              </Link>
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.href} className="relative group">
+                <Link href={item.href} passHref
+                    className={`block py-2 pl-3 pr-4 rounded md:p-0 ${pathname === item.href ? 'text-blue-700' : 'text-blue-900'} hover:text-blue-700`}
+                    style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
+                    <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">{item.label}</span>
+                </Link>
+                <span className={`absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full ${pathname === item.href ? 'w-full' : ''}`}></span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
