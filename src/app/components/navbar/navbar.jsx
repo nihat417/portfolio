@@ -65,13 +65,13 @@ const Navbar = () => {
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              <Link href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
+              <Link href="/common/about" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
                 <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">About</span>
               </Link>
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="relative group">
-              <Link href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
+              <Link href="/common/projects" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-transparent md:hover:bg-transparent md:hover:text-blue-700 md:p-0" style={{ fontSize: '1.25rem', transition: 'font-size 0.3s' }}>
                 <span className="text-lg md:text-xl lg:text-2xl xl:text-3xl">Projects</span>
               </Link>
               <span className="absolute left-0 bottom-0 w-0 h-1 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
