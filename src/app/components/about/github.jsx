@@ -7,8 +7,8 @@ const Github = () => {
       <h1 className="text-center text-3xl font-bold mb-5">
         Days I <span className="text-blue-600">Code</span>
       </h1>
-      <div className="flex w-full justify-center max-w-full overflow-hidden">
-        <div className="transform scale-90 sm:scale-75 md:scale-100">
+      <div className="flex w-full justify-center max-w-full overflow-hidden ">
+        <div className="transform scale-90 sm:scale-75 md:scale-100 p-[10px] rounded-[10px] bg-[#000]">
           <GitHubCalendar
             username="nihat417"
             blockSize={15}
