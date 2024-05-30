@@ -35,11 +35,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full border-gray-200 z-50 transition-all duration-300 ${isScrolled ? 'bg-white bg-opacity-70 backdrop-blur-md' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 w-full border-gray-200 z-50 transition-all duration-300 ${isScrolled ? 'bg-opacity-100 backdrop-blur-md' : 'bg-opacity-70 backdrop-blur-md'}`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center">
           <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
-          <span className="self-center text-2xl md:text-3xl lg:text-4xl font-semibold whitespace-nowrap">Niko Portfolio</span>
+          <span className="self-center text-2xl md:text-3xl lg:text-4xl text-blue-600 font-semibold whitespace-nowrap">NHPortfolio</span>
         </a>
         <button
           type="button"

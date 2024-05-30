@@ -5,7 +5,7 @@ const Card = ({ image, description, githubLink, demoLink,about }) => {
     <div className=" max-w-sm w-full sm:w-72 mx-auto bg-black rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
       <div className="relative">
         <img className="w-full h-48 object-cover" src={image} alt="Card Image" />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-75"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25"></div>
       </div>
       <div className="p-6">
         <p className="text-white text-base mb-4">{description}</p>

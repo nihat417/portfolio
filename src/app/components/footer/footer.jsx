@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className='w-full bg-gray-800 text-white p-4'>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col justify-between items-center sm:flex-row">
             <p className="text-left">Designed and Developed by Nihat Akremi</p>
             <p className="text-center">Copyright © 2024 NA</p>
             <div className="flex space-x-4">
