@@ -1,6 +1,6 @@
 # Next.js Project
 
-Open (https://portfolio-base-rose.vercel.app/) with your browser to see the result.
+Open https://portfolio-base-rose.vercel.app/ with your browser to see the result.
 
 ![Portfolio Main](https://portfoliosa417.blob.core.windows.net/voltagephotos/portfoliomain.png)
 
